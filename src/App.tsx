@@ -13,7 +13,7 @@ export interface Record {
 
 const App = () => {
   const [data, setData] = useState(initialData)
-  const [nextId, setNextId] = useState(5)
+  const [nextId, setNextId] = useState(initialData.length + 1)
   const [editId, setEditId] = useState('')
   const [showCreateModal, setShowCreateModal] = useState(false)
   const [showEditModal, setShowEditModal] = useState(false)
@@ -62,8 +62,8 @@ const App = () => {
   return (
     <>
       <h1>Address Table</h1>
-      <button type='button' onClick={onCreate}>Add Address</button>
-      <Table dataSource={data} columns={columns} pagination={false} />
+      <button className='createButton' type='button' onClick={onCreate}>Add Address</button>
+      <Table className='addressTable' dataSource={data} columns={columns} pagination={false} />
       {createModal}
       {editModal}
     </>
