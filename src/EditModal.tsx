@@ -32,12 +32,12 @@ const EditModal = (
   return (
     <Modal open={showEditModal} onCancel={closeEditModal} onOk={onSubmit} title='Edit'>
       <label>
-        Name:
+        {'Name: '}
         <input type='text' name={'name'} value={editData.name} onChange={onChange} />
       </label>
       <br />
       <label>
-        Address:
+        {'Address: '}
         <input type='text' name={'address'} value={editData.address} onChange={onChange} />
       </label>
     </Modal>

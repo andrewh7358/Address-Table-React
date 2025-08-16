@@ -31,12 +31,12 @@ const CreateModal = (
   return (
     <Modal open={showCreateModal} onCancel={closeCreateModal} onOk={onSubmit} title='Create'>
       <label>
-        Name:
+        {'Name: '}
         <input type='text' name={'name'} value={createData.name} onChange={onChange} />
       </label>
       <br />
       <label>
-        Address:
+        {'Address: '}
         <input type='text' name={'address'} value={createData.address} onChange={onChange} />
       </label>
     </Modal>
